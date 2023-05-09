@@ -1,0 +1,29 @@
+<script>
+    /* 3 ways to create object*/
+    var myObject = new Object();
+    myObject.firstName = "ski";
+    myObject.company = "PS";
+    myObject.location = "blr";
+    console.log(myObject);
+
+    var myObject1 = {firstName:"ski",company:"PS",location:"blr"};
+    console.log(myObject1);
+
+    /* 2 ways to get firstname in console*/
+    console.log(myObject['firstName']);
+    console.log(myObject.firstName);
+
+    /* helpful for creating lot of objects*/
+    var myObject2 = new myCreator("ski","PS","blr");
+
+    /*Constructor*/
+    function myCreator(a,b,c){
+        this.firstName = a;
+        this.company = b;
+        this.location = c;
+    }
+    
+    console.log(myObject2);
+
+
+</script>
