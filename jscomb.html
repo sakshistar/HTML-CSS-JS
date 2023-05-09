@@ -1,0 +1,16 @@
+<div id = "p1" onclick="alert('hello guys');">Click Me 1</div>
+
+<div id ="p2">click me 2</div>
+<div id ="p3">click me 3</div>
+<script>
+    var sty ="";
+    document.getElementById("p2").addEventListener("click",function(){
+         sty = prompt('what is your name?');
+        console.log(sty);
+    })
+
+    document.getElementById("p3").addEventListener("click",function(){
+    console.log(sty);
+})
+</script>
+<!-- <script src="script.js"></script> -->
