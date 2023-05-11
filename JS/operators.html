@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Learning by Discoveryvip</title>
+    <style>
+        .btn {
+            padding: 5px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        A
+        <input type="number" name="numA" id="numA" value="6">
+        <br> B
+        <input type="number" name="numB" id="numB" value="33">
+        <div>
+            <div id="btn1" class="btn">Get Result</div>
+            <BR>
+            <div id="btn2" class="btn">Do Something when Clicked</div>
+        </div>
+        <div> Output :
+            <div id="output">nothing</div>
+        </div>
+        <div>
+            <ul>
+                <li>one</li>
+                <li>one</li>
+                <li>one</li>
+                <li>one</li>
+                <li>one</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        /*
+         var a = "one";
+         var b = "two";
+         var c = 55;
+
+         var output = document.getElementById("output");
+         output.innerHTML = a+b+c;
+         */
+        
+         var b1 = document.getElementById("btn1");
+         var b2 = document.getElementById("btn2");
+         var output = document.getElementById("output");
+
+         //console.log(b1);
+         b1.onclick = fun;
+         b2.onclick =  function(){
+            var p = document.getElementById("numA").value;
+            var q = document.getElementById("numB").value;
+            console.log(p);
+            console.log(typeof(p));
+            var pp = parseInt(p);
+            console.log(pp);
+            console.log(typeof(pp));
+            var qq = parseInt(q);
+            pp++;
+            qq--;
+            console.log(p==pp);
+            p.parseInt = pp;
+           q.parseInt = qq;
+         }
+            
+         
+         function fun(){
+            var p = document.getElementById("numA").value;
+            var q = document.getElementById("numB").value;
+            var pp = parseInt(p);
+            var qq = parseInt(q);
+            output.innerHTML = pp+qq;
+
+             output.style.backgroundColor = "yellow";
+
+            var status = (pp > qq) ? "A bigger than B" : "B bigger than A";
+            // ternary opertor
+            var c = true;
+            var d = false;
+            output.innerHTML = pp || qq;
+            
+         }
+
+
+
+
+    </script>
+</body>
+
+</html>
